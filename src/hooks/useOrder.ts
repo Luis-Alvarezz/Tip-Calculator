@@ -7,10 +7,13 @@ export default function useOrder() {
 
   const addItem = (item: MenuItem) => {
     // console.log('Agregando...');
-    console.log(item);
-
+    // console.log(item);
+    const newItem : OrderItem = {...item, quantity: 1} // * CASTEO para asegurarnos de mantener el TYPE 
+    setOrder([...order, newItem])
   }
 
+  console.log(order);
+  
   
   return {
     addItem
