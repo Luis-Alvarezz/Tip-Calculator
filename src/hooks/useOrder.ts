@@ -22,10 +22,17 @@ export default function useOrder() {
     }
   }
 
-  console.log(order);
+  const removeItem = (id: MenuItem['id']) => { // * loopUp para indicar el MenuItem con 'id'
+    // console.log('Eliminando...', id)
+    setOrder(order.filter(item => item.id !== id))
+  }
+ 
+  // console.log(order);
   
   
   return {
-    addItem
+    order,
+    addItem,
+    removeItem
   }
 }
