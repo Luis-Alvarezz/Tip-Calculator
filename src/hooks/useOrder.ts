@@ -4,6 +4,7 @@ import type { MenuItem, OrderItem } from "../types/types"
 export default function useOrder() {
   // * STATE 1 - Orden
   const [order, setOrder] = useState<OrderItem[]>([])
+  const [tip, setTip] = useState(0)
 
   const addItem = (item: MenuItem) => {
     // console.log('Agregando...');
@@ -32,6 +33,8 @@ export default function useOrder() {
   
   return {
     order,
+    tip,
+    setTip,
     addItem,
     removeItem
   }
