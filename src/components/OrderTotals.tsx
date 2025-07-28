@@ -16,7 +16,7 @@ export default function OrderTotals({order}: OrderTotalsProps) {
       <div className="space-y-3">
         <h2 className="font-black text-2xl">Totales y Propinas</h2>
         <p>Subtotal a pagar: {''}
-          <span className="font-bold">${formatCurrency(subTotalAmount)} </span>
+          <span className="font-bold">{formatCurrency(subTotalAmount)} </span>
         </p>
 
         <p>Propina: {''}
