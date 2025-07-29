@@ -38,7 +38,8 @@ export default function TipPercentageForm({setTip, tip} : TipPercentageProps) {
                 value={tipOption.value}
                 onChange={e => setTip(+e.target.value)} // * +e.target.value -> Convertimos el string a number
                 // * Opc 2: e.target.valueAsNumber -> Pero NO funciona con radio, unicamente con tipo TEXT y otros inputs
-                checked={tipOption.value === tip}
+                checked={tipOption.value === tip} // * Revisa si el valor del tip es igual al que se almacena en mi orden al dar 'Guardar Orden'
+                // * (claramente no, por ende NO seran iguales y se deja de marcar )
               />
             </div>
           )) }
